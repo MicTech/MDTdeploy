@@ -12,4 +12,4 @@ SET datetimestamp=%datestamp%_%timestamp%
 SET fullBackupPath=%backupPath%%backupPrefix%%datetimestamp%
 
 Tools\xcopy.exe %worldPath% %fullBackupPath% /s/h/e/i
-Tools\7zip\7z.exe a -tzip %fullBackupPath%.zip %fullBackupPath% -r -mx5
+Tools\7zip\7z.exe a -tzip %fullBackupPath%_%COMPUTERNAME%.zip %fullBackupPath% -r -mx5
