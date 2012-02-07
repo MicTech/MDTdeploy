@@ -7,3 +7,5 @@ SET backupPath="C:\Backup\"
 SET backupPrefix="Project_"
 SET checkoutPath="C:\Checkouts\"
 SET CVSROOT=:pserver:%cvsUser%:%cvsPass%@%cvsPath%
+SET remote01="\\server01\Checkouts\"
+SET remote02="\\server02\Checkouts\"
