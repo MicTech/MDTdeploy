@@ -1,3 +1,5 @@
+CALL config.tools.bat
+CALL config.cvs.bat
 CALL config.bat
 REM Order and format of values in date and time depends on Locale settings
 SET datestamp=%date:~-4,4%%date:~-10,2%%date:~-7,2%
@@ -11,5 +13,5 @@ SET timestamp=%hh%%mm%%ss%
 SET datetimestamp=%datestamp%_%timestamp%
 SET fullBackupPath=%backupPath%%backupPrefix%%datetimestamp%
 
-Tools\xcopy.exe %worldPath% %fullBackupPath% /s/h/e/i
-Tools\7zip\7z.exe a -tzip %fullBackupPath%_%COMPUTERNAME%.zip %fullBackupPath% -r -mx5
+%xcopyPath% %worldPath% %fullBackupPath% /s/h/e/i
+%7zipPath% a -tzip %fullBackupPath%_%COMPUTERNAME%.zip %fullBackupPath% -r -mx5
