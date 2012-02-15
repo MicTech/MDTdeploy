@@ -14,4 +14,4 @@ SET datetimestamp=%datestamp%_%timestamp%
 SET fullBackupPath=%backupPath%%backupPrefix%%datetimestamp%
 
 %xcopyPath% %worldPath% %fullBackupPath% /s/h/e/i
-%7zipPath% a -tzip %fullBackupPath%_%COMPUTERNAME%.zip %fullBackupPath% -r -mx5
+%sevenZipPath% a -tzip %fullBackupPath%_%COMPUTERNAME%.zip %fullBackupPath% -r -mx5
